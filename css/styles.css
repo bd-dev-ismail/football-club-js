@@ -7,3 +7,14 @@
 .fc-secondary-color{
     color: #7c859a;
 }
+.fc-btn{
+    padding: 8px 30px;
+    background-color: #E81F3E;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+.fc-btn:hover{
+    background-color: #171e36;
+    color: white;
+}
