@@ -1,8 +1,5 @@
-
-//Select five player 
 const playerArray = [];
 function selected(player){
-
     const tableBody = document.getElementById('table-body');
     tableBody.innerText = '';
     for(let i = 0; i<playerArray.length; i++){
@@ -26,5 +23,6 @@ function addPlayer(element){
     const playerObj = {playerName: playerName};
     playerArray.push(playerObj);
     element.disabled = true;
+    //call new function
     selected(playerArray);
 };

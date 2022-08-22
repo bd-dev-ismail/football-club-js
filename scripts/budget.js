@@ -1,4 +1,3 @@
-
 document.getElementById('btn-calculate').addEventListener('click', function(){
     const playerField = getInputFieldById('player-filed');
     //calcualte player Cost
