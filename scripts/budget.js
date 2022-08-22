@@ -1,21 +1,26 @@
-function getInputFieldById(inputId){
-    const inputField = document.getElementById(inputId);
-    const inputFieldAmountString = inputField.value;
-    const inputFieldAmount = parseFloat(inputFieldAmountString);
-    inputField.value = '';
-    return inputFieldAmount;
-};
-// function setTextElementById(elementId){
-//     const textElement = document.getElementById(elementId);
-//     const textAmount = textElement.innerText;
-//     textElement.innerText = textAmount;
-// }
+
 document.getElementById('btn-calculate').addEventListener('click', function(){
     const playerField = getInputFieldById('player-filed');
     //calcualte player Cost
     const playerCost = playerArray.length * playerField;
+    if(isNaN(playerCost)){
+        alert('Please Enter a number');
+        return;
+    }
     //set the value of expense
-    const playerText = document.getElementById('player-text');
-    const playerTextAmount = playerText.innerText;
-    playerText.innerText = playerCost;
+    setTextElementById('player-text', playerCost);
+    
+});
+document.getElementById('btn-total').addEventListener('click', function(){
+    const playerText = getTextElementById('player-text');
+    const managerField = getInputFieldById('manager-field');
+    const coachField = getInputFieldById('coach-field');
+    //calculate total
+    const totalCostValue = playerText + managerField + coachField;
+    if(isNaN(totalCostValue)){
+        alert('valid')
+        return;
+    }
+    //set the total cost
+    setTextElementById('total-text', totalCostValue);
 });
