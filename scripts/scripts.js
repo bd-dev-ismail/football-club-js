@@ -13,8 +13,9 @@ function selected(player){
         tableBody.appendChild(tr);    
     }
     if(playerArray.length >= 5){
-         alert('You cannot add more than five');
-            // return;
+        
+            alert('You cannot add more than 5');
+            return;
         }
     
 };
