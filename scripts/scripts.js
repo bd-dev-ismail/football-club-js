@@ -9,17 +9,17 @@ function selected(player){
         <tr>
             <th>${i+1}</th>
             <td>${name}</td>
-         </tr>`;
-        tableBody.appendChild(tr);    
-    }
-    if(playerArray.length >= 5){
-        
-            alert('You cannot add more than 5');
-            return;
-        }
-    
+        </tr>`;
+        tableBody.appendChild(tr);       
+    };
+
 };
+
 function addPlayer(element){
+    if(playerArray.length === 5){
+        alert('more than 5');
+        return;
+    }
     const playerName = element.parentNode.children[0].innerText;
     const playerObj = {playerName: playerName};
     playerArray.push(playerObj);
