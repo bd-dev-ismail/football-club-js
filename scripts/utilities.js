@@ -12,10 +12,10 @@ function getTextElementById(textId){
     const textFieldAmountString = textField.innerText;
     const textFieldAmount = parseFloat(textFieldAmountString);
     return textFieldAmount;
-}
+};
 //set text element
 function setTextElementById(elementId, newValue){
     const textElement = document.getElementById(elementId);
     textElement.innerText = newValue;
     
-}
+};

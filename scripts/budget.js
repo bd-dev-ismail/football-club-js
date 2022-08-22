@@ -3,9 +3,9 @@ document.getElementById('btn-calculate').addEventListener('click', function(){
     //calcualte player Cost
     const playerCost = playerArray.length * playerField;
     if(isNaN(playerCost)){
-        alert('Please Enter a number');
+        alert('Please Enter a Valid Number!');
         return;
-    }
+    };
     //set the value of expense
     setTextElementById('player-text', playerCost);
     
@@ -17,9 +17,9 @@ document.getElementById('btn-total').addEventListener('click', function(){
     //calculate total
     const totalCostValue = playerText + managerField + coachField;
     if(isNaN(totalCostValue)){
-        alert('valid')
+        alert('Please Enter a Valid Number!');
         return;
-    }
+    };
     //set the total cost
     setTextElementById('total-text', totalCostValue);
 });

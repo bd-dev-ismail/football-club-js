@@ -17,7 +17,7 @@ function selected(player){
 
 function addPlayer(element){
     if(playerArray.length === 5){
-        alert('more than 5');
+        alert('You Can Select Only Five Player!!!');
         return;
     }
     const playerName = element.parentNode.children[0].innerText;
